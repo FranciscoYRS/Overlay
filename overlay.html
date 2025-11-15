@@ -1,99 +1,83 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.2">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Overlay (All-in-One)</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: transparent;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; 
+        }
+        
+        /* This custom class adds a drop shadow for readability */
+        .text-shadow {
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+        }
+    </style>
 </head>
-<body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Stream Overlay (All-in-One)&lt;/title&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">    </span></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>background-color: transparent;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>/* This custom class adds a drop shadow for readability */</p>
-<p class="p1"><span class="Apple-converted-space">        </span>.text-shadow {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);</p>
-<p class="p1"><span class="Apple-converted-space">        </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body class="h-screen w-screen"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="fixed bottom-5 left-5 flex items-center space-x-3 bg-black/60 p-2 px-4 rounded-md"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;svg xmlns="http://www.w3.org/2000/svg"<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">             </span>width="20" height="20" viewBox="0 0 24 24" fill="none"<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">             </span>stroke="currentColor" stroke-width="2" stroke-linecap="round"<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">             </span>stroke-linejoin="round" class="w-5 h-5"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;rect width="20" height="20" x="2" y="2" rx="5" ry="5"&gt;&lt;/rect&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"&gt;&lt;/path&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;line x1="17.5" y1="6.5" x2="17.51" y2="6.5"&gt;&lt;/line&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/svg&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="text-base font-semibold"&gt;cisco5v&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="text-gray-400"&gt;|&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="text-base font-semibold text-red-500"&gt;24/7&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="text-gray-400"&gt;|&lt;/span&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;span class="text-base font-semibold"&gt;DAY 1&lt;/span&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="brb-screen"<span class="Apple-converted-space"> </span></p>
-<p class="p1"><span class="Apple-converted-space">         </span>class="h-screen w-screen flex flex-col justify-center items-center text-center p-10 hidden"&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-8xl font-black text-shadow"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>BRB</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/h1&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-3xl font-semibold text-shadow mt-4"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>(Cisco is getting ready... or something)</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// Listen for any key being pressed</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('keydown', function(event) {</p>
-<p class="p2"><span class="Apple-converted-space">            </span></p>
-<p class="p1"><span class="Apple-converted-space">            </span>// Check if the pressed key is the '*' (star) key on the numpad</p>
-<p class="p1"><span class="Apple-converted-space">            </span>if (event.key === '*') {</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>// 1. Find the BRB screen element by its ID</p>
-<p class="p1"><span class="Apple-converted-space">                </span>const brbScreen = document.getElementById('brb-screen');</p>
-<p class="p2"><span class="Apple-converted-space">                </span></p>
-<p class="p1"><span class="Apple-converted-space">                </span>// 2. Toggle the "hidden" class</p>
-<p class="p1"><span class="Apple-converted-space">                </span>//<span class="Apple-converted-space">    </span>(If it's hidden, show it. If it's shown, hide it.)</p>
-<p class="p1"><span class="Apple-converted-space">                </span>brbScreen.classList.toggle('hidden');</p>
-<p class="p1"><span class="Apple-converted-space">            </span>}</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<body class="h-screen w-screen">
+
+    <div class="fixed bottom-5 left-5 flex items-center space-x-3 bg-black/60 p-2 px-4 rounded-md">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" 
+             width="20" height="20" viewBox="0 0 24 24" fill="none" 
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+             stroke-linejoin="round" class="w-5 h-5">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+
+        <span class="text-base font-semibold">cisco5v</span>
+        
+        <span class="text-gray-400">|</span>
+        
+        <span class="text-base font-semibold text-red-500">24/7</span>
+        
+        <span class="text-gray-400">|</span>
+        
+        <span class="text-base font-semibold">DAY 1</span>
+    </div>
+
+    <div id="brb-screen" 
+         class="h-screen w-screen flex flex-col justify-center items-center text-center p-10 hidden">
+        
+        <h1 class="text-8xl font-black text-shadow">
+            BRB
+        </h1>
+
+        <p class="text-3xl font-semibold text-shadow mt-4">
+            (Cisco is getting ready... or something)
+        </p>
+    </div>
+
+
+    <script>
+        // Listen for any key being pressed
+        document.addEventListener('keydown', function(event) {
+            
+            // Check if the pressed key is the '*' (star) key on the numpad
+            if (event.key === '*') {
+                
+                // 1. Find the BRB screen element by its ID
+                const brbScreen = document.getElementById('brb-screen');
+                
+                // 2. Toggle the "hidden" class
+                //    (If it's hidden, show it. If it's shown, hide it.)
+                brbScreen.classList.toggle('hidden');
+            }
+        });
+    </script>
+
 </body>
 </html>
